@@ -11,4 +11,4 @@ public:
     double obtenerPorcentajeDanio(int atacante, int defensor);
 };
 
-#endif // MOTOR_DE_REGLAS_H
+#endif 

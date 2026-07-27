@@ -10,7 +10,10 @@ using namespace std;
 
 class IAAleatoria : public IAEstrategica {
 public:
-    int elegirFicha(const vector<Elemento*>& mazo, Elemento* fichaOponente);
+    IAAleatoria(const string& nombre, int cantidad = 5) 
+        : IAEstrategica(nombre, cantidad) {}
+
+    int elegirFicha(Elemento* fichaOponente) override;
 };
 
 #endif

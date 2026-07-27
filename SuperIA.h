@@ -3,15 +3,17 @@
 
 #include "IAEstrategica.h"
 #include "MotorDeReglas.h"
+#include "Elemento.h"
 #include <vector>
-#include "elemento.h"
 
 using namespace std;
 
 class SuperIA : public IAEstrategica {
 public:
-    int elegirFicha(const vector<Elemento*>& mazo, Elemento* fichaOponente);
+    SuperIA(const string& nombre, int cantidad = 5) 
+        : IAEstrategica(nombre, cantidad) {}
+
+    int elegirFicha(Elemento* fichaOponente) override;
 };
 
 #endif
-

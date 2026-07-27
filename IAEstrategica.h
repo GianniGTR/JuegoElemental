@@ -1,19 +1,20 @@
 #ifndef IAESTRATEGICA_H
 #define IAESTRATEGICA_H
 
-#include <vector>
+#include "Jugador.h"
 #include "Elemento.h"
+#include <vector>
 
 using namespace std;
 
-class IAEstrategica
-{
+class IAEstrategica : public Jugador {
 public:
+    IAEstrategica(const string& nombre, int cantidad = 5) 
+        : Jugador(nombre, cantidad) {}
+
     virtual ~IAEstrategica() = default;
 
-    virtual int elegirFicha(
-        const vector<Elemento*>& mazo,
-        Elemento* fichaOponente);
+    virtual int elegirFicha(Elemento* fichaOponente) override;
 };
 
 #endif

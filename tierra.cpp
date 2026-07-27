@@ -17,5 +17,3 @@ string Tierra::getNombreTipo()
 {
     return "Tierra";
 }
-
-
